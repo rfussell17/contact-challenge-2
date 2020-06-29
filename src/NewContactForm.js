@@ -2,18 +2,17 @@ import React, { Component } from "react";
 
 class NewContactForm extends Component {
   onSubmit = (e) => {
-    console.log("clicked")
     e.preventDefault();
   };
 
   render() {
     return (
-      <form onSubmit={this.props.updateName} className="pb-5">
+      <form onSubmit={this.onSubmit} className="pb-5">
         <div className="row">
           <div className="col-sm">
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
-              <input id="first-name" name="firstName" type="text" className="form-control" onChange={this.props.updateName}/>
+              <input id="first-name" name="firstName" type="text" className="form-control" />
             </div>
           </div>
           <div className="col-sm">
