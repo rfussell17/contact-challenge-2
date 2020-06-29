@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class NewContactForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
+    console.log("button pressed")
   };
 
   render() {
@@ -12,7 +13,7 @@ class NewContactForm extends Component {
           <div className="col-sm">
             <div className="form-group">
               <label htmlFor="first-name">First Name</label>
-              <input id="first-name" name="firstName" type="text" className="form-control" />
+              <input id="first-name" name="firstName" type="text" className="form-control" onChange={this.updateName} />
             </div>
           </div>
           <div className="col-sm">

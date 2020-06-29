@@ -23,7 +23,7 @@ class App extends Component {
         },
       ],
       form: {
-        firstName:"",
+        firstName: props.firstName,
         lastName: "",
         phone: "",
         email: "",
