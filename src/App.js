@@ -23,7 +23,7 @@ class App extends Component {
         },
       ],
       form: {
-        firstName: props.firstName,
+        firstName: "",
         lastName: "",
         phone: "",
         email: "",
@@ -58,7 +58,7 @@ class App extends Component {
       <div className="container">
         <h1 className="my-4">Contact Tracker!</h1>
         <div>
-          <NewContactForm />
+          <NewContactForm updateName={this.updateName}/>
         </div>
         <div>
           <ContactsTable contacts={this.state.contacts} />
