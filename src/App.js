@@ -23,16 +23,16 @@ class App extends Component {
         },
       ],
       form: {
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        addressLine1: "",
-        addressLine2: "",
-        city: "",
-        state: "",
-        country: "",
-        notes: "",
+        firstName: "Robin F",
+        lastName: "Fussell",
+        phone: "555-555-5555",
+        email: "robinf@email.com",
+        addressLine1: "123 Main st",
+        addressLine2: "Apt 1",
+        city: "Gotham City",
+        state: "ZZ",
+        country: "CA",
+        notes: "This is a note",
       },
     };
     this.state.updateName = this.updateName.bind(this)
@@ -58,7 +58,8 @@ class App extends Component {
       <div className="container">
         <h1 className="my-4">Contact Tracker!</h1>
         <div>
-          <NewContactForm updateName={this.updateName}/>
+          <NewContactForm updateName={this.updateName}
+          form={this.state.form} />
         </div>
         <div>
           <ContactsTable contacts={this.state.contacts} />
