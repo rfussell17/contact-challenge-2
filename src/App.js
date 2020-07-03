@@ -35,10 +35,11 @@ class App extends Component {
         notes: "This is a note",
       },
     };
-    this.state.updateName = this.updateName.bind(this)
+   // this.state.updateName = this.updateName.bind(this)
     this.state.updateInputs = this.updateInputs.bind(this)
   }
 
+  /*
   updateName = (value) => {
     // creates a "deep clone" aka copy of this.state.form object
     const formCopy = Object.assign({}, this.state.form);
@@ -52,27 +53,29 @@ class App extends Component {
     });
   };
 
-  updateInputs = (value) => {
+  */
+
+  updateInputs = (property, value) => {
     // creates a "deep clone" aka copy of this.state.form object
     const formCopy = Object.assign({}, this.state.form);
 
-    // updates the name property of the "deep clone"
-    formCopy.name = value;
-
+    const property = props.event.target
+    this.props.name = value;
     // updates this.state.form to be the "deep clone"
     this.setState({
+      form: formCopy, property
     });
   };
 
   render() {
     // do not remove this!
     console.log("current value of name <input>: ", this.state.form.firstName);
-    console.log("current value of form <input>: ", this.state.form);
     return (
       <div className="container">
         <h1 className="my-4">Contact Tracker!</h1>
         <div>
-          <NewContactForm updateName={this.updateName}
+          <NewContactForm 
+          //updateName={this.updateName}
           updateInputs={this.updateInputs}
           form={this.state.form} />
         </div>
