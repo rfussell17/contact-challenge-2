@@ -52,15 +52,21 @@ class App extends Component {
     });
   };
 
+
+  updateForm = (property, value) => {
+    const formCopy = Object.assign({}, this.state.form);
+    formCopy[property] = value;
+    this.setState({
+      form: formCopy,
+    });
+  };
   */
 
   updateInputs = (property, value) => {
-    // creates a "deep clone" aka copy of this.state.form object
     const formCopy = Object.assign({}, this.state.form);
 
-    const property = props.event.target
-    this.props.name = value;
-    // updates this.state.form to be the "deep clone"
+    formCopy[property] = value;
+
     this.setState({
       form: formCopy, property
     });
