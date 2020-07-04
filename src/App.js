@@ -35,7 +35,6 @@ class App extends Component {
         notes: "This is a note",
       },
     };
-   // this.state.updateName = this.updateName.bind(this)
     this.state.updateInputs = this.updateInputs.bind(this)
   }
 
@@ -75,7 +74,6 @@ class App extends Component {
         <h1 className="my-4">Contact Tracker!</h1>
         <div>
           <NewContactForm 
-          //updateName={this.updateName}
           updateInputs={this.updateInputs}
           form={this.state.form} />
         </div>

@@ -21,7 +21,7 @@ class NewContactForm extends Component {
                 type="text"
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.firstName);
                 }}
               />
             </div>
@@ -36,7 +36,7 @@ class NewContactForm extends Component {
                 type="text"
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.lastName);
                 }}
               />
             </div>
@@ -53,7 +53,7 @@ class NewContactForm extends Component {
                 value={this.props.form.email}
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.email);
                 }}
               />
             </div>
@@ -68,7 +68,7 @@ class NewContactForm extends Component {
                 value={this.props.form.phone}
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.phone);
                 }}
               />
             </div>
@@ -85,7 +85,7 @@ class NewContactForm extends Component {
                 type="text"
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.addressLine1);
                 }}
               />
             </div>
@@ -100,7 +100,7 @@ class NewContactForm extends Component {
                 type="text"
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.addressLine2);
                 }}
               />
             </div>
@@ -117,7 +117,7 @@ class NewContactForm extends Component {
                 value={this.props.form.city}
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.city);
                 }}
               />
             </div>
@@ -132,7 +132,7 @@ class NewContactForm extends Component {
                 value={this.props.form.state}
                 className="form-control"
                 onChange={(e) => {
-                  this.props.updateInputs(e.target.value);
+                  this.props.updateInputs(e.target.state);
                 }}
               />
             </div>
@@ -147,7 +147,7 @@ class NewContactForm extends Component {
             value={this.props.form.country}
             className="form-control"
             onChange={(e) => {
-              this.props.updateInputs(e.target.value);
+              this.props.updateInputs(e.target.country);
             }}
           />
         </div>
@@ -160,7 +160,7 @@ class NewContactForm extends Component {
             value={this.props.form.notes}
             className="form-control"
             onChange={(e) => {
-              this.props.updateInputs(e.target.value);
+              this.props.updateInputs(e.target.notes);
             }}
           />
         </div>
