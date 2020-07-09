@@ -164,7 +164,7 @@ class NewContactForm extends Component {
             }}
           />
         </div>
-        <button className="btn btn-lg btn-primary float-right" type="submit">
+        <button className="btn btn-lg btn-primary float-right" type="submit" onSubmit={this.updateInputs}>
           Submit
         </button>
       </form>
