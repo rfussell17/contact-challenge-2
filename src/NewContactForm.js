@@ -4,6 +4,7 @@ class NewContactForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     console.log("button pressed");
+    this.props.updateInputs()
   };
 
   render() {
