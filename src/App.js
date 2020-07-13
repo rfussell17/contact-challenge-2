@@ -60,7 +60,7 @@ class App extends Component {
           form={this.state.form} />
         </div>
         <div>
-          <ContactsTable contacts={this.state.contacts} />
+          <ContactsTable contacts={this.state.contacts}  />
         </div>
       </div>
     );
