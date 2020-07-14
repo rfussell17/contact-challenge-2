@@ -36,6 +36,7 @@ class App extends Component {
       },
     };
     this.state.updateInputs = this.updateInputs.bind(this)
+    this.state.handleSubmit = this.handleSubmit.bind(this)
   }
 
   updateInputs = (property, value) => {
@@ -48,6 +49,12 @@ class App extends Component {
     });
   };
 
+
+  handleSubmit(){
+    this.setState({
+      contacts: this.state.form.value
+    })
+  }
   render() {
     // do not remove this!
     console.log("current value of name <input>: ", this.state.form.firstName);
