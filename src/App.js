@@ -51,10 +51,16 @@ class App extends Component {
 
 
   handleSubmit(){
+    const contactsCopy =  Object.assign({}, this.state.contacts);
+
+    contactsCopy[this.state.contacts]
+    //contactsCopy.push(this.state.contacts)
+
     this.setState({
-      contacts: this.state.form.value
+      contacts: contactsCopy
     })
   }
+
   render() {
     // do not remove this!
     console.log("current value of name <input>: ", this.state.form.firstName);
