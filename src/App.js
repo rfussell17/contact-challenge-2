@@ -49,7 +49,6 @@ class App extends Component {
     });
   };
 
-
   handleSubmit(){
     const contactsCopy =  Object.assign({}, this.state.contacts);
 
