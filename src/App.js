@@ -35,8 +35,8 @@ class App extends Component {
         notes: "This is a note",
       },
     };
-    this.state.updateInputs = this.updateInputs.bind(this)
-    this.state.handleSubmit = this.handleSubmit.bind(this)
+    this.updateInputs = this.updateInputs.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   updateInputs = (property, value) => {
@@ -51,7 +51,7 @@ class App extends Component {
 
   handleSubmit(){
     const contactsCopy =  Object.assign({}, this.state.contacts);
-
+    debugger;
     contactsCopy.push(this.state.contacts)
 
     this.setState({
@@ -67,6 +67,7 @@ class App extends Component {
         <h1 className="my-4">Contact Tracker!</h1>
         <div>
           <NewContactForm 
+          handleSubmit={this.handleSubmit}
           updateInputs={this.updateInputs}
           form={this.state.form} />
         </div>
