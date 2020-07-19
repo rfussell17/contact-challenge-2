@@ -50,7 +50,12 @@ class App extends Component {
   };
 
   handleSubmit(){
-    const contactsCopy =  Object.assign({}, this.state.contacts);
+    const contactsCopy = [];
+    for(let i = 0; i < this.state.contacts.length; i++){
+        //create deep clone
+        contactsCopy.push(this.state.contacts)
+    }
+
     debugger;
     contactsCopy.push(this.state.contacts)
 
