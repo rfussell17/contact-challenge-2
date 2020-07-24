@@ -53,7 +53,6 @@ class App extends Component {
     let contactsCopy = [];
     for(let i = 0; i < this.state.contacts.length; i++){
       contactsCopy = Object.assign({}, this.state.contacts);
-        this.state.contacts.push(contactsCopy)
     }
 
     this.setState({
@@ -74,7 +73,18 @@ class App extends Component {
           form={this.state.form} />
         </div>
         <div>
-          <ContactsTable contacts={this.state.contacts}  />
+          <ContactsTable contacts={this.state.contacts}
+          firstName={this.state.firstName}
+          lastName={this.state.lastName}
+          phone={this.state.phone}
+          email={this.state.email}
+          addressLine1={this.state.addressLine1}
+          addressLine2={this.state.addressLine2}
+          city={this.state.city}
+          state={this.state.state}
+          country={this.state.country}
+          notes={this.state.firstName}
+            />
         </div>
       </div>
     );
