@@ -55,6 +55,22 @@ class App extends Component {
       contactsCopy = Object.assign({}, this.state.contacts);
     }
 
+    let newData = {
+      firstName: this.state.form.firstName,
+      lastName: this.state.form.lastName,
+      phone: this.state.form.phone,
+      email: this.state.form.email,
+      addressLine1: this.state.form.addressLine1,
+      addressLine2: this.state.form.addressLine2,
+      city: this.state.form.city,
+      state: this.state.form.state,
+      country: this.state.form.country,
+      notes: this.state.form.notes
+    }
+
+
+    contactsCopy.push({newData})
+
     this.setState({
       contacts: contactsCopy
     })
@@ -74,16 +90,16 @@ class App extends Component {
         </div>
         <div>
           <ContactsTable contacts={this.state.contacts}
-          firstName={this.state.firstName}
-          lastName={this.state.lastName}
-          phone={this.state.phone}
-          email={this.state.email}
-          addressLine1={this.state.addressLine1}
-          addressLine2={this.state.addressLine2}
-          city={this.state.city}
-          state={this.state.state}
-          country={this.state.country}
-          notes={this.state.firstName}
+          //firstName={this.state.firstName}
+          //lastName={this.state.lastName}
+          //phone={this.state.phone}
+          //email={this.state.email}
+          //addressLine1={this.state.addressLine1}
+         // addressLine2={this.state.addressLine2}
+         // city={this.state.city}
+        //  state={this.state.state}
+        //  country={this.state.country}
+        //  notes={this.state.firstName}
             />
         </div>
       </div>
