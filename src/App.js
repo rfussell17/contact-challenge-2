@@ -23,16 +23,16 @@ class App extends Component {
         },
       ],
       form: {
-        firstName: "Robin F",
-        lastName: "Fussell",
-        phone: "555-555-5555",
-        email: "robinf@email.com",
-        addressLine1: "123 Main st",
-        addressLine2: "Apt 1",
-        city: "Gotham City",
-        state: "ZZ",
-        country: "CA",
-        notes: "This is a note",
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        addressLine1: "",
+        addressLine2: "",
+        city: "",
+        state: "",
+        country: "",
+        notes: "",
       },
     };
     this.updateInputs = this.updateInputs.bind(this)
@@ -52,8 +52,9 @@ class App extends Component {
   handleSubmit(){
     let contactsCopy = [];
     for(let i = 0; i < this.state.contacts.length; i++){
-      contactsCopy = Object.assign({}, this.state.contacts);
-    }
+      const copy = Object.assign({}, this.state.contacts[i]);
+      contactsCopy.push(copy);
+  }
 
     let newData = {
       firstName: this.state.form.firstName,
@@ -69,7 +70,7 @@ class App extends Component {
     }
 
 
-    contactsCopy.push({newData})
+    contactsCopy.push(newData)
 
     this.setState({
       contacts: contactsCopy
@@ -90,16 +91,6 @@ class App extends Component {
         </div>
         <div>
           <ContactsTable contacts={this.state.contacts}
-          //firstName={this.state.firstName}
-          //lastName={this.state.lastName}
-          //phone={this.state.phone}
-          //email={this.state.email}
-          //addressLine1={this.state.addressLine1}
-         // addressLine2={this.state.addressLine2}
-         // city={this.state.city}
-        //  state={this.state.state}
-        //  country={this.state.country}
-        //  notes={this.state.firstName}
             />
         </div>
       </div>
