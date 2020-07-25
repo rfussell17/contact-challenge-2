@@ -73,7 +73,17 @@ class App extends Component {
     contactsCopy.push(newData)
 
     this.setState({
-      contacts: contactsCopy
+      contacts: contactsCopy,
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      addressLine1: "",
+      addressLine2: "",
+      city: "",
+      state: "",
+      country: "",
+      notes: ""
     })
   }
 

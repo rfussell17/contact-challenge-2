@@ -20,6 +20,7 @@ class NewContactForm extends Component {
                 name="firstName"
                 value={this.props.form.firstName}
                 type="text"
+                required
                 className="form-control"
                 onChange={(e) => {
                   this.props.updateInputs(e.target.name, e.target.value);
@@ -35,6 +36,7 @@ class NewContactForm extends Component {
                 name="lastName"
                 value={this.props.form.lastName}
                 type="text"
+                required
                 className="form-control"
                 onChange={(e) => {
                   this.props.updateInputs(e.target.name, e.target.value);
@@ -51,6 +53,7 @@ class NewContactForm extends Component {
                 id="email"
                 name="email"
                 type="text"
+                required
                 value={this.props.form.email}
                 className="form-control"
                 onChange={(e) => {
@@ -66,6 +69,7 @@ class NewContactForm extends Component {
                 id="phone"
                 name="phone"
                 type="text"
+                required
                 value={this.props.form.phone}
                 className="form-control"
                 onChange={(e) => {
@@ -84,6 +88,7 @@ class NewContactForm extends Component {
                 name="addressLine1"
                 value={this.props.form.addressLine1}
                 type="text"
+                required
                 className="form-control"
                 onChange={(e) => {
                   this.props.updateInputs(e.target.name, e.target.value);
@@ -115,6 +120,7 @@ class NewContactForm extends Component {
                 id="city"
                 name="city"
                 type="text"
+                required
                 value={this.props.form.city}
                 className="form-control"
                 onChange={(e) => {
@@ -130,6 +136,7 @@ class NewContactForm extends Component {
                 id="state"
                 name="state"
                 type="text"
+                required
                 value={this.props.form.state}
                 className="form-control"
                 onChange={(e) => {
@@ -145,6 +152,7 @@ class NewContactForm extends Component {
             id="country"
             name="country"
             type="text"
+            required
             value={this.props.form.country}
             className="form-control"
             onChange={(e) => {
