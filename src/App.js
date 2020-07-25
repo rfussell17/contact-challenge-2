@@ -74,6 +74,7 @@ class App extends Component {
 
     this.setState({
       contacts: contactsCopy,
+      form:{
       firstName: "",
       lastName: "",
       phone: "",
@@ -84,6 +85,7 @@ class App extends Component {
       state: "",
       country: "",
       notes: ""
+      }
     })
   }
 
